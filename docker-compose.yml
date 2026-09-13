@@ -1,0 +1,10 @@
+services:
+  telegram-bot:
+    build: .
+    container_name: tg_master_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./temp:/app/temp
